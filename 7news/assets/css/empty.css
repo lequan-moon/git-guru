@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+#empty_template table tr {
+    height: 50px;
+}
+#empty_template .height-auto table tr {
+    height: auto;
+}
+#empty_template .height-auto table tr td {
+    padding: 2px 8px;
+    white-space: nowrap;
+}
+#empty_template table tr td:first-child {
+    width: 55px;
+}
+#empty_template table {
+    width: 100%;
+}

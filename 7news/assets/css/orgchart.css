@@ -1,0 +1,81 @@
+.team {
+    background: bisque !important;
+}
+.group{
+    background: cornsilk !important;
+}
+.department {
+    background: grey;
+    color: white;
+}
+.group-total {
+    background: #71B9FC !important;
+    color: white;
+}
+.count {
+    font-style: italic;
+}
+.groupleaders {
+    background: cyan;
+}
+.teamleaders {
+    background: lightgreen;
+}
+.newemployee {
+    background: pink;
+}
+.mover {
+    background: orange;
+}
+.changeemployee {
+    background: green;
+}
+.team.left > td:first-child {
+    padding-left: 50px;
+}
+
+.group.left > td:first-child {
+    padding-left: 20px;
+}
+.table th{
+    text-align: left;
+}
+td, th, table {
+    white-space: nowrap;
+    border:none !important;
+    vertical-align:top;
+}
+.departerment {
+    background: #fff;
+}
+
+.table-sub th {
+    min-width: 30px !important;
+}
+
+#mytable th,
+#mytable td,
+#mytable-sub th,
+#mytable-sub td,
+#title-table th,
+#title-table td,
+#content-table th,
+#content-table td {
+    padding: 2px 8px;
+    white-space:nowrap;
+    vertical-align:top !important;
+    overflow: hidden;
+}
+
+.show_tooltip {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    width:0px;
+    height:0px;
+    border-bottom:5px solid transparent;
+    border-top:5px solid transparent;
+    border-right:5px solid red;
+}

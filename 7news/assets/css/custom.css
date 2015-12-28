@@ -1,0 +1,490 @@
+@CHARSET "UTF-8";
+body{
+	font-size:13px;
+}
+.content-wrapper {
+    padding-bottom:20px;}
+.frmFilter {
+    padding: 5px;
+    background-color: #ebeaea;
+}
+.frmFilter .btn{
+    margin-left: 10px;
+}
+.input-group-addon {
+    padding: 4px 12px;
+    cursor: pointer;
+}
+.date input[type=text] {
+}
+.form-group input[type=text] {
+    padding: 0px 5px !important;
+}
+.form-group .date {
+    display: flex;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.form-group label {
+    text-align: right;
+}
+.margin-2 {
+    margin:2px !important;
+}
+.margin-top-20 {
+    margin-top: 20px !important;
+}
+.margin-top-10 {
+    margin-top: 10px !important;
+}
+.margin-left-20 {
+    margin-left: 20px !important;
+}
+.margin-left-40 {
+    margin-left: 40px !important;
+}
+.margin-left-50 {
+    margin-left: 50px !important;
+}
+.margin-right-20 {
+    margin-right: 20px !important;
+}
+.margin-right-30 {
+    margin-right: 30px !important;
+}
+.margin-bot-0 {
+    margin-bottom: 0px !important;
+}
+.margin-bot-20 {
+    margin-bottom: 20px !important;
+}
+.margin-bot-10 {
+    margin-bottom: 10px !important;
+}
+.padding-top-5 {
+    padding-top: 5px !important;
+}
+.padding-top-10 {
+    padding-top: 10px !important;
+}
+.padding-left-5 {
+    padding-left: 5px !important;
+}
+.padding-right-5 {
+    padding-right: 5px !important;
+}
+.padding-left-0 {
+    padding-left: 0px !important;
+}
+.padding-right-0 {
+    padding-right: 0px !important;
+}
+.text-align-left {
+    text-align: left !important;
+}
+.text-align-right {
+    text-align: left !important;
+}
+.padding-right-15 {
+    padding-right: 15px !important;
+}
+.padding-right-10 {
+    padding-right: 10px !important;
+}
+.padding-left-10 {
+    padding-left: 10px !important;
+}
+.padding-left-15 {
+    padding-left: 15px !important;
+}
+.btn {
+   padding:1px 5px !important;
+}
+.main-header .logo {
+	text-align:left !important;
+}
+.table th {
+    background-color: #bcbcbc;
+    text-align: center;
+}
+.box-title {
+    font-weight: bold;
+}
+.input-file {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.select-custom, .input-custom {
+    padding-left: 0px;
+}
+.select-custom select, .input-custom input {
+    padding: 0px 12px !important;
+    height: 25px;
+}
+.table-main, .table-main-header {
+    width: auto;
+    margin-bottom: 40px;
+}
+.table-sub {
+    overflow-x: auto;
+}
+.table-sub-header{
+    overflow:hidden}
+.table-sub table, .table-sub-header table {
+    width: auto !important;
+    margin-bottom: 0px;
+}
+.table-seat {
+	width: auto !important;
+}
+#hrm #btn-add-group {
+    float: left;
+    margin-left: 20px;
+}
+#hrm #btn-add-group.center {
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+#hrm #btn-add-group.center.edit {
+    margin-top: 180px;
+}
+.delete-button-area {
+    background: #ffffff none repeat scroll 0 0;
+    border: 5px solid #efefef;
+    border-radius: 50%;
+    color: #999999;
+    height: 40px;
+    padding: 5px 0;
+    position: absolute;
+    right: -25px;
+    top: -7%;
+    transition: all 500ms ease-in-out 0s;
+    width: 40px;
+}
+.delete-button-area:hover {
+    color: #555555;
+}
+.employee_detail_content {
+    background-color:#ecf0f5;
+    padding: 10px 5px 0 0;
+    border: 5px solid #efefef;
+}
+#mytable th,
+#mytable-header th,
+#mytable td,
+#mytable-sub th,
+#mytable-sub-header th,
+#mytable-sub td,
+#title-table th,
+#title-table td,
+#content-table th,
+#content-table td {
+    padding: 2px 8px;
+    white-space:nowrap;
+    vertical-align:middle;
+}
+#mytable th, #mytable-sub th {
+    padding-right: 23px;
+}
+.sort_both{
+    cursor: pointer;
+}
+.sort_both_pink{
+    cursor: pointer;
+    background-color:#FFCCCC !important;
+}
+.sort_both_cyan{
+    cursor: pointer;
+    background-color:#CCFFCC !important;
+}
+.sort_asc {
+    background: #bcbcbc url('../../assets/img/sort_asc.png') no-repeat scroll right center !important;
+    cursor: pointer;
+}
+th[id^="amount_"].sort_asc, #unit_price.sort_asc {
+    background: rgb(163, 255, 220) url('../../assets/img/sort_asc.png') no-repeat scroll right center !important;
+    cursor: pointer;
+}
+th[id^="mng_num_"].sort_asc {
+    background: rgb(253, 242, 186) url('../../assets/img/sort_asc.png') no-repeat scroll right center !important;
+    cursor: pointer;
+}
+.sort_desc {
+    background: #bcbcbc url('../../assets/img/sort_desc.png') no-repeat scroll right center !important;
+    cursor: pointer;
+}
+th[id^="amount_"].sort_desc, #unit_price.sort_desc {
+    background: rgb(163, 255, 220) url('../../assets/img/sort_desc.png') no-repeat scroll right center !important;
+    cursor: pointer;
+}
+th[id^="mng_num_"].sort_desc {
+    background: rgb(253, 242, 186) url('../../assets/img/sort_desc.png') no-repeat scroll right center !important;
+    cursor: pointer;
+}
+th[id^="bill_date_"].sort_asc {
+    background: #EE82EE url('../../assets/img/sort_asc.png') no-repeat scroll right center !important;
+    cursor: pointer;
+}
+th[id^="bill_date_"].sort_desc {
+    background: #EE82EE url('../../assets/img/sort_desc.png') no-repeat scroll right center !important;
+    cursor: pointer;
+}
+th[id^="filing_date_"].sort_asc {
+    background: #00BFFF url('../../assets/img/sort_asc.png') no-repeat scroll right center !important;
+    cursor: pointer;
+}
+th[id^="filing_date_"].sort_desc {
+    background: #00BFFF url('../../assets/img/sort_desc.png') no-repeat scroll right center !important;
+    cursor: pointer;
+}
+.form-import {
+    width: 50%;
+    float: left;
+}
+.width100 {
+    width: 100%;
+}
+.input-power-plan {
+    width: 30px !important;
+}
+#title-table, #content-table-div {
+    font-size: 14px;
+}
+#title-table, #left-table {
+    width: 23%;
+    min-width: 250px;
+    float: left;
+}
+#content-table-div, #content-table-div-fake {
+    width: 77%;
+    float: left;
+    overflow-x: auto;
+}
+#content-table-div-fake {
+    margin-left: 23%;
+}
+#content-table-div-fake div:FIRST-CHILD {
+    height: 10px;
+    width: 101%;
+}
+#content-table-div .category {
+    min-width: 50px;
+}
+#title-table th, #title-table td, #content-table th, #content-table td {
+    vertical-align: middle;
+    text-align: center;
+}
+.error_row {
+    color: #FF0000 !important;
+}
+.employee_99999, .group_9999 {
+    background-color: #bcbcbc;
+}
+.man-power-search select {
+    margin-right: 30px;
+    width: auto;
+    display: inline;
+}
+.man-power-search b {
+    margin-right: 10px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .input-group-addon {
+        padding-right: 24px;
+    }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance : textfield;
+}
+.select_seat {
+    width: auto;
+    display: inline;
+}
+.form-group {
+    overflow:hidden;
+}
+.input-group-addon {
+    line-height:0 !important;
+}
+.group-box {
+    padding:10px;
+    overflow:hidden;
+}
+.blue {
+    background-color:rgb(163,255,220) !important;
+}
+.yellow {
+    background-color:rgb(253,242,186) !important;
+}
+.violet {
+    background-color:#EE82EE !important;
+}
+.deepskyblue {
+    background-color:#00BFFF !important;
+}
+.payment-month-item, .payment-num-item {
+    width:16.6%;
+    float:left;
+    margin:5px 0;
+}
+.payment-month-item input {
+    width:50%;
+}
+.payment-num-item input {
+    width:75%;
+}
+#update-contract .form-group label{
+    text-align:left;
+}
+#update-batch-payment .form-group label{
+    text-align:left;
+}
+.label_light {
+    font-weight: 200;
+}
+span.dot {
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background-color:#000;
+    display:block;
+    margin-top:20px;
+}
+.breadcrumb {
+    margin-bottom: 0px; !important
+}
+.officer_name{
+    background-color:#ecf0f5;
+    border:none;
+}
+.officer_name_in_form {
+    background-color: #ebeaea;
+    border:none;
+}
+.content-warning {
+    padding: 5px;
+    border: 1px solid #FD0001;
+    width: 500px;
+    color: #FD0001;
+    font-weight: bold;
+}
+.ping, .organe, .green{
+    text-align:center;
+    margin-bottom:10px;
+}
+.ping{
+    background-color: #F6CECE;
+}
+.organe{
+    background-color: #F7BE81;
+}
+.green{
+    background-color: #D0F5A9;
+}
+.margin-lr-1 {
+    margin: 0 1px;
+}
+#btn-position {
+    position: absolute;
+    right: 18px;
+    top: 19px;
+}
+#btn-csv {
+    margin-top: 10px;
+}
+.pagination {
+    margin: 10px 0;
+}
+.sort_both {
+    padding-right: 8px !important;
+}
+
+#search_form .form-group,
+#hrm_register .form-group,
+#outsourcing-editbase .form-group,
+#edit_out_sourcing_payment .form-group {
+    margin-bottom: 10px;
+}
+
+.select2-container--default .select2-selection--single {
+    border-radius: 0px !important;
+    height: 25px !important;
+}
+.fixed {
+    position:fixed;
+    bottom:0;
+    padding:10px 0;
+    background-color: #ECF0F5;
+}
+.table-header{
+	background-color: #ECF0F5;
+}
+
+.fixed-top {
+    position:fixed;
+    top:0;
+}
+.table-header.fixed-top .download-csv{
+	display:inline-block;
+	overflow:hidden;}
+#mytable-header th span,
+#mytable-sub-header th span,
+#left-table th span,
+#right-table table th span,
+#mytable td span,
+#mytable-sub td span,
+#title-table td span,
+#content-table td span
+{
+    display:block;
+    padding:0 10px;
+}
+
+#right-table table th,
+#right-table table td,
+#left-table th,
+#left-table td {
+	padding: 2px 8px;
+    white-space:nowrap;
+    vertical-align:middle;
+}
+.manpowerplan > div {
+	background-color: #ECF0F5;
+	width:100%;
+}
+#table-header {
+    overflow:hidden;
+}
+#right-table {
+	overflow:hidden;
+}
+.main-header {
+	position:fixed;
+	top:0;
+	width:100%;
+}
+.main-sidebar {
+	position:fixed;
+	top:0;
+	left:0;
+}
+.content-wrapper, .fixed-top {
+	margin-top:50px;
+}
+#mytable, #mytable-sub {
+	margin-top:-1px;
+
+}
+.count {
+	padding-top:5px;
+	margin:10px;
+	
+}
+label.required{
+	color:red;
+}
