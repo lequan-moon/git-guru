@@ -13,8 +13,13 @@ use Fuel\Core\Request;
 class Controller_Top extends Controller_Template {
 	public $template = "template/admin";
 	
-	public function setTemplate($template) {
-        $this->template = $template;
-        $this->template = \View::forge($this->template);
+	public function action_index(){
+		$data = array('base_url' => Config::get('base_url'), 
+						'content' => 'abc');
+		$this->template = \View::forge("template/admin", $data);
+	}
+	
+	public function setTemplate() {
+		$this->template = \View::forge($this->template);
     }
 }

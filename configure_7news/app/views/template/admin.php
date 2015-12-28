@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title><?php echo $pageTitle; ?> - 管理表システム</title>
+        <title>7NEWS</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- Bootstrap 3.3.2 -->
         <link href="<?php echo $base_url; ?>assets/adminlte/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -21,11 +21,6 @@
         <!-- BACK TO TOP CSS -->
         <link href="<?php echo $base_url; ?>assets/css/back_to_top.css" rel="stylesheet" type="text/css" />
         <!-- Load CSS -->
-        <?php
-            foreach ($listCss as $css) {
-                echo $css['url'];
-            }
-        ?>
         <link rel="shortcut icon" href="<?php echo $base_url; ?>assets/img/favicon.ico" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,7 +46,6 @@
                             <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
                                 <a>
-                                <span class="hidden-xs"><?php echo $user_info; ?></span>
                                 </a>
                             </li>
                             <li>
@@ -68,68 +62,41 @@
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar" id="cssmenu">
                     <!-- sidebar menu: : style can be found in sidebar.less -->
-                    <?php try {?>
                     <ul>
-                        <?php if (Util\Authority::can('Controller_Employee', 'index')
-                            || Util\Authority::can('Controller_Employee', 'csvimport')
-                            || Util\Authority::can('Controller_Seat', 'index')
-                            || Util\Authority::can('Controller_ManPowerPlan', 'index')
-                            ) { ?>
                         <li class="has-sub
-                            <?php if (array_search(strtolower(Request::active()->controller), array('controller_employee', 'controller_seat', 'controller_manpowerplan')) !== false ) { echo 'active'; } ?>">
                             <a href='<?php echo $base_url; ?>employee/'><span><i class="fa fa-users"></i>人員管理表</span></a>
                             <ul>
-                                <?php if (Util\Authority::can('Controller_Employee', 'index')) { ?>
                                 <li>
                                     <a href='<?php echo $base_url; ?>employee/'><span>人員一覧</span></a>
                                 </li>
-                                <?php } ?>
-                                <?php if (Util\Authority::can('Controller_Employee', 'csvimport')) { ?>
                                 <li>
                                     <a href='<?php echo $base_url; ?>employee/csvImport/'><span>新規一括登録</span></a>
                                 </li>
-                                <?php } ?>
-                                <?php if (Util\Authority::can('Controller_Seat', 'index')) { ?>
                                 <li>
                                     <a href='<?php echo $base_url; ?>seat/'><span>座席確認</span></a>
                                 </li>
-                                <?php } ?>
-                                <?php if (Util\Authority::can('Controller_ManPowerPlan', 'index')) { ?>
                                 <li>
                                     <a href='<?php echo $base_url; ?>manpowerplan/'><span>要員計画</span></a>
                                 </li>
-                                <?php } ?>
                             </ul>
                         </li>
-                        <?php } ?>
                         
-                        <?php if (Util\Authority::can('Controller_Outsourcing', 'index')
-                            || Util\Authority::can('Controller_TmpEmployee', 'index')
-                            ) { ?>
                         <li class="has-sub
                         <?php if (array_search(strtolower(Request::active()->controller), array('controller_outsourcing', 'controller_tmpemployee')) !== false ) { echo 'active'; } ?>">
                             <a href='#'><span><i class="fa fa-archive"></i><span>業務委託・派遣種別管理</span></span></a>
                             <ul>
-                                 <?php if (Util\Authority::can('Controller_Outsourcing', 'index')) { ?>
                                  <li>
                                      <a href='<?php echo $base_url; ?>outsourcing/'><span>常駐業務委託一覧</span></a>
                                  </li>
-                                 <?php } ?>
-                                 <?php if (Util\Authority::can('Controller_TmpEmployee', 'index')) { ?>
                                  <li>
                                     <a href='<?php echo $base_url; ?>tmpemployee/'><span>派遣社員一覧</span></a>
                                  </li>
-                                 <?php } ?>
                             </ul>
                         </li>
-                        <?php } ?>
                         
-                        <?php if (Util\Authority::can('Controller_OrgChart', 'index')
-                            ) { ?>
                         <li class=" <?php if (array_search(strtolower(Request::active()->controller), array('controller_orgchart')) !== false ) { echo 'active'; } ?>">
                             <a href='<?php echo $base_url; ?>orgchart/'><span><i class="fa fa-area-chart"></i>組織図</span></a>
                         </li>
-                        <?php } ?>
                         <!-- 
                         <li>
                             <a href='#'><span><i class="fa fa-list"></i>メーリングリスト</span></a>
@@ -138,61 +105,36 @@
                             <a href='#'><span><i class="fa fa-mobile"></i>社用携帯端末管理</span></a>
                         </li>
                          -->
-                        <?php if (Util\Authority::can('Controller_MasterOrganization', 'orglist') 
-                            || Util\Authority::can('Controller_MasterEmployeeType', 'index')
-                            || Util\Authority::can('Controller_MasterManagePosition', 'index')
-                            || Util\Authority::can('Controller_MasterCompany', 'index')
-                            || Util\Authority::can('Controller_MasterOrgChart', 'index')
-                            ) { ?>
                         <li class="has-sub
-                            <?php if (array_search(strtolower(Request::active()->controller), array('controller_masterorganization', 'controller_mastercompany', 'controller_masteremployeetype', 'controller_mastermanageposition', 'controller_masterorgchart')) !== false ) { echo 'active'; } ?>">
                             <a href='#'><span><i class="fa fa-eye"></i>マスタ管理</span></a>
                             <ul>
-                                <?php if (Util\Authority::can('Controller_MasterOrganization', 'orglist')) { ?>
                                 <li>
                                     <a href="<?php echo $base_url; ?>masterorganization/orgList"><span>組織</span></a>
                                 </li>
-                                <?php } ?>
-                                <?php if (Util\Authority::can('Controller_MasterEmployeeType', 'index')) { ?>
                                 <li>
                                     <a href="<?php echo $base_url; ?>masteremployeetype"><span>雇用形態</span></a>
                                 </li>
-                                <?php } ?>
-                                <?php if (Util\Authority::can('Controller_MasterManagePosition', 'index')) { ?>
                                 <li>
                                     <a href="<?php echo $base_url; ?>mastermanageposition"><span>役職</span></a>
                                 </li>
-                                <?php } ?>
-                                <?php if (Util\Authority::can('Controller_MasterCompany', 'index')) { ?>
                                 <li>
                                     <a href="<?php echo $base_url; ?>mastercompany"><span>会社名</span></a>
                                 </li>
-                                <?php } ?>
-                                <?php if (Util\Authority::can('Controller_MasterOrgChart', 'index')) { ?>
                                 <li>
                                     <a href="<?php echo $base_url; ?>masterorgchart"><span>組織図</span></a>
                                 </li>
-                                <?php } ?>
                             </ul>
                         </li>
-                        <?php } ?>
-                        
-                        <?php if (Util\Authority::can('Controller_SystemAuthority', 'index')
-                            ) { ?>
                         <li class="has-sub
                             <?php if (array_search(strtolower(Request::active()->controller), array('controller_systemauthority')) !== false ) { echo 'active'; } ?>">
                             <a href='#'><span><i class="fa fa-eye"></i>システム管理</span></a>
                             <ul>
-                                <?php if (Util\Authority::can('Controller_SystemAuthority', 'index')) { ?>
                                 <li>
                                     <a href="<?php echo $base_url; ?>systemauthority"><span>システム利用権限管理</span></a>
                                 </li>
-                                <?php } ?>
                             </ul>
                         </li>
-                        <?php } ?>
                     </ul>
-                    <?php } catch (Exception $e) {}?>
                 </section>
                 <!-- /.sidebar -->
             </aside>
@@ -248,11 +190,6 @@
         <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.fancybox.js?v=2.1.5"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/jquery.fancybox.css?v=2.1.5" media="screen" />
         <!-- Load Javascript -->
-        <?php
-            foreach ($listJavascript as $js) {
-                echo $js['url'];
-            }
-        ?>
      <a href="#0" class="cd-top">Top</a>
     </body>
 </html>
