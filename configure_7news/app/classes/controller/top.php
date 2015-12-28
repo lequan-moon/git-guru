@@ -15,7 +15,8 @@ class Controller_Top extends Controller_Template {
 	
 	public function action_index(){
 		$data = array('base_url' => Config::get('base_url'), 
-						'content' => 'abc123');
+						'content' => 'abc123',
+						'right_banner' => 'banner1');
 		$this->template = \View::forge("template/admin", $data);
 	}
 	
